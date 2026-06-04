@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+
+  <div id="loginBox">
+
+    <h2>Join Chat</h2>
+
+    <input
+      id="usernameInput"
+      type="text"
+      placeholder="Enter your name"
+    >
+
+    <button id="joinBtn">
+      join chat
+    </button>
+
+  </div>
+
+  <!-- Main Chat -->
+
+  <div class="chat-container" id="chatContainer">
+
+    <!-- Online Users -->
+
+    <div class="users-panel">
+
+      <h3>Online Users</h3>
+
+      <ul id="userList"></ul>
+
+    </div>
+
+    <!-- Chat Section -->
+
+    <div class="chat-section">
+
+      <!-- Header -->
+
+      <div class="chat-header">
+
+        <div>
+          💬 CHAT ROOM
+        </div>
+
+        <div id="onlineCount">
+          0 Online
+        </div>
+
+      </div>
+
+      <!-- Messages -->
+
+      <ul id="messages"></ul>
+
+      <!-- Message Form -->
+
+      <form id="form">
+
+        <div class="input-area">
+
+          <!-- Emoji Button -->
+
+          <button
+            type="button"
+            id="emojiBtn"
+          >
+            😊
+          </button>
+
+          <!-- Emoji Popup -->
+
+          <div id="emojiBox"></div>
+
+          <!-- Message Input -->
+
+          <input
+            id="input"
+            type="text"
+            placeholder="Type your message..."
+            autocomplete="off"
+          >
+
+          <!-- Send Button -->
+
+          <button type="submit">
+            Send
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- Socket.IO -->
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Custom JS -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
